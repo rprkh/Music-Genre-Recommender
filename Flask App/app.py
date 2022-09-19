@@ -1,7 +1,16 @@
 import os
+import numpy as np
+import pandas as pd
+import pickle
 import lightgbm
 from flask import Flask, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
+import librosa
+# import IPython.display as ipd
+import sklearn
+from sklearn.preprocessing import MinMaxScaler
+import warnings
+warnings.filterwarnings('ignore')
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads_folder/'
