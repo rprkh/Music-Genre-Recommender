@@ -1,14 +1,13 @@
 import os
-import numpy as np
-import pandas as pd
 import pickle
 import lightgbm
 from flask import Flask, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
-import librosa
-# import IPython.display as ipd
 import sklearn
 from sklearn.preprocessing import MinMaxScaler
+import feature_extractor
+import preprocessing
+import joblib
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -35,6 +34,20 @@ def upload_file():
             message = 'File upload successful'
         else:
             message = 'Upload only .wav files'
+
+    return render_template('index.html', **locals())
+
+@app.route('/predict', methods = ['GET', 'POST'])
+def predict():
+    features_dictionary = feature_extractor.audio_feature_extractor('uploads_folder/uploaded_audio_file.wav')
+    X = preprocessing.preprocessor(features_dictionary, joblib.load('assets/standard_scaler.save'))
+
+    model = pickle.load(open('assets/opt_lgbm_model.pkl', 'rb'))
+
+    class_names = ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock']
+
+    final_class = class_names[(model.predict(X.reshape(1, -1)))[0]].title()
+    probs = max((model.predict_proba(X.reshape(1, -1)))[0]) * 100
 
     return render_template('index.html', **locals())
 

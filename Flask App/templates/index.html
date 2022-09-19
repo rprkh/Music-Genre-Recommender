@@ -15,5 +15,13 @@
         {{message}}
         <br>
     </form>
+    <br>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <input type="submit" value="Predict">
+        <br>
+        Class Name: {{final_class}}
+        <br>
+        Confidence: {{probs}}
+    </form>
 </body>
 </html>
