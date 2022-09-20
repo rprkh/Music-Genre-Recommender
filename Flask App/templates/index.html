@@ -8,11 +8,11 @@
     <title>Music Genre Recognizer</title>
 </head>
 <body>
-    <h1 align="center">Music Genre Recognizer</h1>
-    <div class="prediction">
-        <p align="center">Class Name: {{final_class}}</p>
-        <p align="center">Confidence: {{probs}}</p>
+    <div class="title">
+        <p align="center"><b>Music Genre Recognizer</b></p>
     </div>
+    <p align="center" class="display">Genre: {{final_class}}</p>
+    <p align="center" class="display">Confidence: {{probs}}{{percent}}</p>
     <div class="form1">
         <form action="/upload" method="POST" enctype="multipart/form-data">
             <input type="file" name="file" required>

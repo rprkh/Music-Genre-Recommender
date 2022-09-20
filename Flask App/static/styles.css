@@ -7,6 +7,18 @@ body {
     color: aqua;
 }
 
+.title p { 
+    margin-top: 15px;
+    font-size: 40px;
+    color: #ADD8E6;
+    margin-bottom: 15px;
+}
+
+.display {
+    font-size: 20px;
+    color: whitesmoke;
+}
+
 .form1 form {
     position: absolute;
     top: 38%;
@@ -84,4 +96,13 @@ body {
     border-bottom: 4px solid #117A60;
     transition: all .2s ease;
     outline: none;
+}
+
+.form2 form input[type=submit]:hover {
+    background: #149174;
+    color: #0C5645;
+  }
+
+.form2 form input[type=submit]:active {
+    border: 0;
 }

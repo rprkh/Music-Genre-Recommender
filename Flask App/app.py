@@ -39,6 +39,8 @@ def upload_file():
 
 @app.route('/predict', methods = ['GET', 'POST'])
 def predict():
+    percent = '%'
+    
     features_dictionary = feature_extractor.audio_feature_extractor('uploads_folder/uploaded_audio_file.wav')
     X = preprocessing.preprocessor(features_dictionary, joblib.load('assets/standard_scaler.save'))
 
