@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: aqua;
+}
+
+.form1 form {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -250px;
+    width: 500px;
+    height: 200px;
+    border: 4px dashed #fff;
+}
+
+.form1 form p{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 170px;
+    color: #ffffff;
+    font-family: Arial;
+  }
+
+.form1 form input[type=file] {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+}
+
+.form1 form input[type=submit] {
+    margin: 0;
+    color: #fff;
+    background: #16a085;
+    border: none;
+    width: 500px;
+    height: 35px;
+    margin-top: -20px;
+    margin-left: -4px;
+    border-radius: 4px;
+    border-bottom: 4px solid #117A60;
+    transition: all .2s ease;
+    outline: none;
+}
+
+.form1 form input[type=submit]:hover {
+    background: #149174;
+    color: #0C5645;
+  }
+
+.form1 form input[type=submit]:active {
+    border: 0;
+}
