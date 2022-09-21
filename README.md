@@ -35,3 +35,30 @@ https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classif
 | Logistic Regression (Default)                           | 73%           | 0.729    | 2.140 |
 | KNN (Default)                                           | 69%           | 0.695    | 2.293 |
 | Decision Tree Classifier (Default)                      | 59%           | 0.582    | 3.231 |
+
+### Usage
+
+Clone the repository
+
+```bash
+https://github.com/rprkh/Music-Genre-Recognizer.git
+```
+
+Install the requirements
+
+```bash
+pip install requirements.txt
+```
+
+Navigate to the `Flask App` folder
+
+```bash
+cd "Flask App"
+```
+
+Run the `app.py` script
+```bash
+python app.py
+```
+
+The website should start on `http://127.0.0.1:2000/`
