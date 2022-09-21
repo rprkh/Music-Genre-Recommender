@@ -1,18 +1,23 @@
 # Music Genre Recognizer
 
-The Light Gradient Boosting Machine (LGBM) model is capable of recognizing 
-10 different genres of music, achieving an accuracy of 90% of the test set,
-an F1 score of 0.90 and an RMSE of 1.03.
+Trained a Light Gradient Boosting Machine (LGBM) model to identify
+10 different genres of music, with an accuracy of 90% on the test set,
+an F1 score of 0.90 and an RMSE of 1.03. The model is deployed using
+Flask.
 
 Optuna was used to perform hyperparameter tuning and improve the accuracy
-of the model by 8% on the test set. The model is deployed using Flask. Once
-an audio file is uploaded to the website by the user 58 different features
+of the model by 8% (from 82% to 90%). Once an audio file is uploaded to the 
+website by the user 58 different features
 are extracted and passed to the model, to accurately identify the genre
 of music.
 
 ### Dataset Used
 
 https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification
+
+### Flask App
+
+
 
 ### Comparison of Different ML Models
 
@@ -30,4 +35,3 @@ https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classif
 | Logistic Regression (Default)                           | 73%           | 0.729    | 2.140 |
 | KNN (Default)                                           | 69%           | 0.695    | 2.293 |
 | Decision Tree Classifier (Default)                      | 59%           | 0.582    | 3.231 |
-
