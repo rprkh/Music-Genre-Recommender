@@ -1,16 +1,15 @@
 # Music Genre Recognizer
 
-Trained a Light Gradient Boosting Machine (LGBM) model to identify
-10 different genres of music, with an accuracy of 90% on the test set,
-an F1 score of 0.90 and an RMSE of 1.03. The training data consists of
-1000 audio samples each of a duraction of 30 seconds. The model is 
-deployed using Flask.
+Music Genre Recognition website that can identify 10 different genres 
+of music using Light Gradient Boosting Machine (LGBM). The model achieves
+an accuracy of 90% on the test set, an F1 score of 0.90 and an RMSE of 1.03. 
+The training data consists of 1000 audio samples each of a duraction of 
+30 seconds. The model is deployed using Flask.
 
 Optuna was used to perform hyperparameter tuning and improve the accuracy
 of the model by 8% (from 82% to 90%). Once an audio file is uploaded to the 
-website by the user, 58 different features
-are extracted and passed to the model to accurately identify the genre
-of music.
+website by the user, 58 different features are extracted and passed to the 
+model to accurately identify the genre of music.
 
 ### Dataset Used
 
