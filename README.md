@@ -15,6 +15,11 @@ model to accurately identify the genre of music.
 
 https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification
 
+### Training and Recommendations
+
+- Training Notebook: https://drive.google.com/file/d/190SE9HUDPu7khhE-AVlQ1Xq8f4-Oq2Oo/view?usp=sharing
+- Recommendation Notebook: https://drive.google.com/file/d/1q-u6jvyTLO0WuXmDJuXhKk1SMlh0EVYv/view?usp=sharing 
+
 ### Flask App
 
 ![Nav Bar](https://github.com/rprkh/Music-Genre-Recognizer/blob/main/Flask%20App/images/1.png)
