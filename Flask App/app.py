@@ -50,9 +50,17 @@ def predict():
     class_names = ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock']
 
     final_class = class_names[(model.predict(X.reshape(1, -1)))[0]].title()
-    probs = max((model.predict_proba(X.reshape(1, -1)))[0]) * 100
+    probs = round((max((model.predict_proba(X.reshape(1, -1)))[0]) * 100), 3)
 
     return render_template('index.html', **locals())
+
+@app.route('/redirect')
+def redirect():
+    return render_template('recommendations.html', **locals())
+
+@app.route('/recommend', methods = ['GET', 'POST'])
+def recommend():
+    print('Test')
 
 rec_songs = get_recommendations.generate_song_recommendations('uploaded_audio_file.wav')
 print(rec_songs)
