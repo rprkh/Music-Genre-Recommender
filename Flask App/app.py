@@ -7,6 +7,7 @@ import sklearn
 from sklearn.preprocessing import MinMaxScaler
 import feature_extractor
 import preprocessing
+import get_recommendations
 import joblib
 import warnings
 warnings.filterwarnings('ignore')
@@ -52,6 +53,9 @@ def predict():
     probs = max((model.predict_proba(X.reshape(1, -1)))[0]) * 100
 
     return render_template('index.html', **locals())
+
+rec_songs = get_recommendations.generate_song_recommendations('uploaded_audio_file.wav')
+print(rec_songs)
 
 if __name__ == '__main__':
     app.run(debug = True, port = 2000)
