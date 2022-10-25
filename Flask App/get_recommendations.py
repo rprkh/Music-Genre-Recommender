@@ -4,6 +4,8 @@ import numpy as np
 import joblib
 import sklearn
 from sklearn.metrics.pairwise import cosine_similarity
+import warnings
+warnings.filterwarnings('ignore')
 
 def generate_song_recommendations(song_name):
     features_dictionary = feature_extractor.audio_feature_extractor('uploads_folder/' + song_name)
@@ -33,10 +35,11 @@ def generate_song_recommendations(song_name):
 
     recommendations = df_similarity[song_name].sort_values(ascending = False)
     recommendations = recommendations.drop(song_name)
-    recommendations = recommendations.head(5)
-
     recommendations = pd.DataFrame(recommendations).to_csv('assets/recommended_songs.csv') 
     rec_songs = pd.read_csv('assets/recommended_songs.csv')
     rec_songs.rename(columns = {'uploaded_audio_file.wav': 'cosine_sim_score'}, inplace = True)
+
+    df_to_merge = pd.read_csv('assets/classified_100_songs.csv')
+    merged_df = pd.merge(rec_songs, df_to_merge, on = 'filename', how = 'left')
     
-    return rec_songs
+    return merged_df

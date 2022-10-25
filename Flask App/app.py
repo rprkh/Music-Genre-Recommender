@@ -15,6 +15,8 @@ warnings.filterwarnings('ignore')
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads_folder/'
 
+genre = [None]
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -51,19 +53,17 @@ def predict():
 
     final_class = class_names[(model.predict(X.reshape(1, -1)))[0]].title()
     probs = round((max((model.predict_proba(X.reshape(1, -1)))[0]) * 100), 3)
+    genre[0] = final_class
 
     return render_template('index.html', **locals())
 
 @app.route('/redirect')
-def redirect():
-    return render_template('recommendations.html', **locals())
-
 @app.route('/recommend', methods = ['GET', 'POST'])
 def recommend():
-    print('Test')
-
-rec_songs = get_recommendations.generate_song_recommendations('uploaded_audio_file.wav')
-print(rec_songs)
+    rec_songs = get_recommendations.generate_song_recommendations('uploaded_audio_file.wav')
+    rec_songs = (rec_songs[rec_songs.label == genre[0].lower()]).head(3)
+        
+    return render_template('recommendations.html', **locals()) 
 
 if __name__ == '__main__':
     app.run(debug = True, port = 2000)
