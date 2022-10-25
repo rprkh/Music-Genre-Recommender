@@ -4,7 +4,6 @@
 
 body {
     background-color: black;
-    color: aqua;
 }
 
 .title p { 
@@ -14,7 +13,13 @@ body {
     margin-bottom: 15px;
 }
 
-.display {
-    font-size: 20px;
+
+.headings {
+    color: #16a085;
+    font-size: 15px;
+}
+
+.values {
     color: whitesmoke;
+    font-size: 20px;
 }

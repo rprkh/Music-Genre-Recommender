@@ -15,6 +15,7 @@ warnings.filterwarnings('ignore')
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads_folder/'
 
+class_names = ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock']
 genre = [None]
 
 @app.route('/')
@@ -49,8 +50,6 @@ def predict():
 
     model = pickle.load(open('assets/opt_lgbm_model.pkl', 'rb'))
 
-    class_names = ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock']
-
     final_class = class_names[(model.predict(X.reshape(1, -1)))[0]].title()
     probs = round((max((model.predict_proba(X.reshape(1, -1)))[0]) * 100), 3)
     genre[0] = final_class
@@ -62,6 +61,19 @@ def predict():
 def recommend():
     rec_songs = get_recommendations.generate_song_recommendations('uploaded_audio_file.wav')
     rec_songs = (rec_songs[rec_songs.label == genre[0].lower()]).head(3)
+
+    song_names = []
+    song_cosine_sim = []
+    song_label = []
+
+    for sn in rec_songs['filename']:
+        song_names.append(sn.split('.m4a', 1)[0])
+
+    for scs in rec_songs['cosine_sim_score']:
+        song_cosine_sim.append(round(scs * 100, 3))
+
+    for sl in rec_songs['label']:
+        song_label.append(sl)
         
     return render_template('recommendations.html', **locals()) 
 

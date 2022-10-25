@@ -15,7 +15,22 @@
         <div class="title">
             <p align="center"><b>Music Recommender</b></p>
         </div>
-        {{rec_songs}}
+        <div align="center">
+            <span class="headings">Song1: </span><span class="values">{{song_names[0]}}</span>
+            <br>
+            <span class="headings">Similarity Score: </span><span class="values">{{song_cosine_sim[0]}}%</span>
+            <br>
+            <br>
+            <span class="headings">Song2: </span><span class="values">{{song_names[1]}}</span>
+            <br>
+            <span class="headings">Similarity Score: </span><span class="values">{{song_cosine_sim[1]}}%</span>
+            <br>
+            <br>
+            <span class="headings">Song3: </span><span class="values">{{song_names[2]}}</span>
+            <br>
+            <span class="headings">Similarity Score: </span><span class="values">{{song_cosine_sim[2]}}%</span>
+            <br>
+        </div>
     </div>
 </body>
 </html>
