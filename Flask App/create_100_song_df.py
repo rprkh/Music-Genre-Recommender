@@ -4,13 +4,13 @@ import feature_extractor
 import warnings
 warnings.filterwarnings('ignore')
 
-files_list = os.listdir('songs')
+files_list = os.listdir('static/songs')
 
 df = pd.read_csv('assets/df_100_songs.csv')
 
 for i in range(len(files_list)):
     try:
-        data = feature_extractor.audio_feature_extractor('songs/' + files_list[i])
+        data = feature_extractor.audio_feature_extractor('static/songs/' + files_list[i])
         df = df.append(data, ignore_index = True)
         print('Filename:', files_list[i])
         print('Features:', data)

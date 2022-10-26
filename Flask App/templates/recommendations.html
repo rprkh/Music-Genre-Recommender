@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../static/css/recommender_styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
     <title>Music Recommender</title>
 </head>
 <body>
@@ -15,22 +16,15 @@
         <div class="title">
             <p align="center"><b>Music Recommender</b></p>
         </div>
-        <div align="center">
-            <span class="headings">Song1: </span><span class="values">{{song_names[0]}}</span>
-            <br>
-            <span class="headings">Similarity Score: </span><span class="values">{{song_cosine_sim[0]}}%</span>
-            <br>
-            <br>
-            <span class="headings">Song2: </span><span class="values">{{song_names[1]}}</span>
-            <br>
-            <span class="headings">Similarity Score: </span><span class="values">{{song_cosine_sim[1]}}%</span>
-            <br>
-            <br>
-            <span class="headings">Song3: </span><span class="values">{{song_names[2]}}</span>
-            <br>
-            <span class="headings">Similarity Score: </span><span class="values">{{song_cosine_sim[2]}}%</span>
-            <br>
+        <div class="music">
+            <p>Similarity Score: {{song_cosine_sim[0]}}</p>
+            <h3>{{song_names[0]}}</h3>
+            <div class="track">
+                <img src="{{url_for('static', filename='images/play.png')}}" id="playBtn">
+                <div id="waveform"></div>
+            </div>
         </div>
     </div>
+    <script type="text/javascript" src="../static/js/song.js"></script>
 </body>
 </html>
