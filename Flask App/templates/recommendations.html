@@ -17,14 +17,33 @@
             <p align="center"><b>Music Recommender</b></p>
         </div>
         <div class="music">
-            <p>Similarity Score: {{song_cosine_sim[0]}}</p>
-            <h3>{{song_names[0]}}</h3>
+            <div class="names"><h3><b>{{song_names[0]}}</b></h3></div>
+            <div class="cossim"><p>Similarity Score: {{song_cosine_sim[0]}}</p></div>
             <div class="track">
                 <img src="{{url_for('static', filename='images/play.png')}}" id="playBtn">
                 <div id="waveform"></div>
             </div>
         </div>
+        <br>
+        <div class="music">
+            <div class="names"><h3><b>{{song_names[1]}}</b></h3></div>
+            <div class="cossim"><p>Similarity Score: {{song_cosine_sim[1]}}</p></div>
+            <div class="track">
+                <img src="{{url_for('static', filename='images/play.png')}}" id="playBtnSong2">
+                <div id="waveform2"></div>
+            </div>
+        </div>
+        <br>
+        <div class="music">
+            <div class="names"><h3><b>{{song_names[2]}}</b></h3></div>
+            <div class="cossim"><p>Similarity Score: {{song_cosine_sim[2]}}</p></div>
+            <div class="track">
+                <img src="{{url_for('static', filename='images/play.png')}}" id="playBtnSong3">
+                <div id="waveform3"></div>
+            </div>
+        </div>
     </div>
+    <br>
     <script type="text/javascript" src="../static/js/song.js"></script>
 </body>
 </html>

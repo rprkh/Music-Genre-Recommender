@@ -13,7 +13,6 @@ body {
     margin-bottom: 15px;
 }
 
-
 .headings {
     color: #16a085;
     font-size: 15px;
@@ -25,21 +24,21 @@ body {
 }
 
 .music {
-    height: 25%;
+    height: 15%;
     width: 90%;
     max-width: 900px;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 0 20px rgba(red, 0, 0, 0.4);
     background: #ffffff;
     color: #555;
     border-radius: 8px;
-    margin-left: 250px;
+    margin-left: 287px;
 }
 
-.track {
+.track, .track2, .track3 {
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .track img {
