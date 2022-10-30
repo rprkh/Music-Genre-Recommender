@@ -18,9 +18,6 @@ for(var j = 0; j < cosSim.length; j++) {
     cosSimContainer.push(cosSimScore);
 }
 
-console.log(songNamesContainer);
-console.log(cosSimContainer);
-
 var wavesurfer = WaveSurfer.create({
     container: '#waveform',
     waveColor: '#ddd',
@@ -51,7 +48,7 @@ var wavesurfer3 = WaveSurfer.create({
     barRadius: 4
 });
 
-wavesurfer.load('static/songs/Autumn Leaves.m4a');
+wavesurfer.load('static/songs/' + songNamesContainer[0] + '.m4a');
 
 playBtn.onclick = function() {
     wavesurfer.playPause();
@@ -68,7 +65,7 @@ wavesurfer.on('finish', function() {
     wavesurfer.stop()
 });
 
-wavesurfer2.load('static/songs/Bohemian Rhapsody (Remastered 2011).m4a');
+wavesurfer2.load('static/songs/' + songNamesContainer[1] + '.m4a');
 
 playBtnSong2.onclick = function() {
     wavesurfer2.playPause();
@@ -85,7 +82,7 @@ wavesurfer2.on('finish', function() {
     wavesurfer2.stop()
 });
 
-wavesurfer3.load('static/songs/Ride of the Valkyries.m4a');
+wavesurfer3.load('static/songs/' + songNamesContainer[2] + '.m4a');
 
 playBtnSong3.onclick = function() {
     wavesurfer3.playPause();
