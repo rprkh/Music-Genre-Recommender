@@ -26,6 +26,9 @@ https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classif
 <br>
 <br>
 ![Nav Bar](https://github.com/rprkh/Music-Genre-Recognizer/blob/main/Flask%20App/readme_images/2.png)
+<br>
+<br>
+![Nav Bar](https://github.com/rprkh/Music-Genre-Recognizer/blob/main/Flask%20App/readme_images/3.png)
 
 ### Comparison of Different ML Models
 
