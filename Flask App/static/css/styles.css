@@ -70,7 +70,7 @@ body {
     height: 200px;
 }
 
-.form1 form input[type=submit], .form2 form input[type=submit], .form3 form input[type=button] {
+.form1 form input[type=submit], .form2 form input[type=submit], .form3 form input[type=submit] {
     margin: 0;
     color: #fff;
     background: #16a085;
@@ -85,11 +85,20 @@ body {
     outline: none;
 }
 
-.form1 form input[type=submit]:hover, .form2 form input[type=submit]:hover, .form3 form input[type=button]:hover {
+.form1 form input[type=submit]:hover, .form2 form input[type=submit]:hover, .form3 form input[type=submit]:hover {
     background: #149174;
     color: #0C5645;
   }
 
-.form1 form input[type=submit]:active, .form2 form input[type=submit]:active, .form3 form input[type=button]:active {
+.form1 form input[type=submit]:active, .form2 form input[type=submit]:active, .form3 form input[type=submit]:active {
     border: 0;
+}
+
+.loader #spinner {
+    position: absolute;
+    top: 80%;
+    left: 47.5%;
+    width: 50px;
+    height: 50px;
+    display: none;
 }

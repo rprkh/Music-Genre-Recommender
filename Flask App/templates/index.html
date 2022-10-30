@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/styles.css">
     <script src="../static/js/recommendations.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Music Genre Recognizer</title>
 </head>
 <body>
@@ -33,8 +34,12 @@
     <br>
     <div class="form3" action="../templates/recommendations.html">
         <form action="/recommend" method="POST" enctype="multipart/form-data">
-            <a href=redirect><input type="button" value="Recommend"></a>
+            <a href="redirect"><input type="submit" value="Recommend"></a>
         </form>
     </div>
+    <div class="loader">
+        <img id="spinner" src="../static/gifs/spinner.gif">
+    </div>
+    <script type="text/javascript" src="../static/js/loader.js"></script>
 </body>
 </html>
