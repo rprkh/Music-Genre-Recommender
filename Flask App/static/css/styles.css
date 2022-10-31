@@ -5,6 +5,7 @@
 body {
     background-color: black;
     color: aqua;
+    overflow: hidden;
 }
 
 .title p { 
@@ -101,4 +102,19 @@ body {
     width: 50px;
     height: 50px;
     display: none;
+}
+
+@media (min-width: 1024px) and (min-height: 720px) {
+
+    .title p {
+        font-size: 55px;
+    }
+
+    .form2 form {
+        top: 75%;
+    }
+
+    .form3 form {
+        top: 83%;
+    }
 }

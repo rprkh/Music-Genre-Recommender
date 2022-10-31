@@ -62,8 +62,6 @@ def recommend():
     rec_songs = get_recommendations.generate_song_recommendations('uploaded_audio_file.wav')
     rec_songs = (rec_songs[rec_songs.label == genre[0].lower()]).head(3)
 
-    print(rec_songs)
-
     song_names = []
     song_cosine_sim = []
     song_label = []
