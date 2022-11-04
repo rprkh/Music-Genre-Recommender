@@ -104,17 +104,147 @@ body {
     display: none;
 }
 
-@media (min-width: 1024px) and (min-height: 720px) {
+@media (min-width: 1260px) and (min-height: 780px) {
 
     .title p {
         font-size: 55px;
     }
 
+    .display {
+        font-size: 28px;
+    }
+
+    .form1 form {
+        margin-top: -75px;
+        height: 220px;
+    }
+
+    .form1 form p {
+        font-size: 20px;
+    }
+
     .form2 form {
-        top: 75%;
+        top: 82%;
     }
 
     .form3 form {
-        top: 83%;
+        top: 91%;
+    }
+}
+
+@media (max-width: 1024px) and (max-width: 1259px){
+
+    .title p {
+        font-size: 40px;
+    }
+
+    .display {
+        font-size: 25px;
+    }
+
+    .form1 form {
+        height: 210px;
+        margin-top: -55px;
+    }
+
+    .form1 form p {
+        font-size: 17px;
+    }
+
+    .form2 form {
+        top: 97%;
+    }
+
+    .form3 form {
+        top: 107%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+
+    .display {
+        font-size: 21px;
+    }
+
+    .form1 form {
+        margin-top: -110px;
+    }
+
+    .form1 form p {
+        font-size: 18px;
+    }
+
+    .form2 form {
+        top: 76%;
+    }
+
+    .form3 form {
+        top: 85%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .display {
+        font-size: 21px;
+    }
+
+    .form1 form {
+        left: 53%;
+        width: 460px;
+    }
+
+    .form1 form input[type=submit] {
+        width: 460px;
+    }
+
+    .form1 form p {
+        font-size: 18px;
+    }
+
+    .form2 form input[type=submit] {
+        top: 84%;
+        width: 460px;
+        margin-left: 15px;
+    }
+
+    .form3 form input[type=submit] {
+        top: 84%;
+        width: 460px;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .title p {
+        margin-left: 150px;
+        font-size: 20px;
+    }
+
+    .display {
+        margin-left: 150px;
+        font-size: 20px;
+    }
+
+    .form1 form {
+        position: absolute;
+        left: 90%;
+        width: 290px;
+        height: 200px;
+        border-radius: 90%;
+    }
+
+    .form1 form p {
+        font-size: 15px;
+    }
+
+    .form2 form, .form3 form {
+        position: absolute;
+        left: 90%;
+    }
+
+    .form1 form input[type=submit], .form2 form input[type=submit], .form3 form input[type=submit] {
+        width: 290px;
     }
 }
