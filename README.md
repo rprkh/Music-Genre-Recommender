@@ -1,6 +1,6 @@
-# Music Genre Recognizer
+# Music Genre Recommender
 
-Music Genre Recognition website that can identify 10 different genres 
+Music Genre Recommendation website that can identify and recommend 10 different genres 
 of music using Light Gradient Boosting Machine (LGBM). The model achieves
 an accuracy of 90% on the test set, an F1 score of 0.90 and an RMSE of 1.03. 
 The training data consists of 1000 audio samples each of a duration of 
