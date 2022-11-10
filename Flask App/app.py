@@ -64,16 +64,12 @@ def recommend():
 
     song_names = []
     song_cosine_sim = []
-    song_label = []
 
     for sn in rec_songs['filename']:
         song_names.append(sn.split('.m4a', 1)[0])
 
     for scs in rec_songs['cosine_sim_score']:
         song_cosine_sim.append(round(scs * 100, 3))
-
-    for sl in rec_songs['label']:
-        song_label.append(sl)
         
     return render_template('recommendations.html', **locals()) 
 

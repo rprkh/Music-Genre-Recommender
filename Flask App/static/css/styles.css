@@ -130,6 +130,13 @@ body {
     .form3 form {
         top: 91%;
     }
+
+    .loader #spinner {
+        top: 85%;
+        left: 47.5%;
+        width: 50px;
+        height: 50px;
+    }
 }
 
 @media (max-width: 1024px) and (max-width: 1259px){
@@ -157,6 +164,13 @@ body {
 
     .form3 form {
         top: 107%;
+    }
+    
+    .loader #spinner {
+        top: 96%;
+        left: 48.5%;
+        width: 25px;
+        height: 25px;
     }
 }
 
@@ -213,18 +227,27 @@ body {
         width: 460px;
         margin-left: 15px;
     }
+
+    .loader #spinner {
+        margin-top: 40px;
+        top: 90%;
+        left: 47.5%;
+        width: 20px;
+        height: 20px;
+    }
 }
 
 @media (max-width: 480px) {
 
     .title p {
         margin-left: 150px;
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .display {
         margin-left: 150px;
         font-size: 20px;
+        margin-bottom: 5px;
     }
 
     .form1 form {
@@ -236,7 +259,7 @@ body {
     }
 
     .form1 form p {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .form2 form, .form3 form {
@@ -246,5 +269,13 @@ body {
 
     .form1 form input[type=submit], .form2 form input[type=submit], .form3 form input[type=submit] {
         width: 290px;
+    }
+
+    .loader #spinner {
+        margin-top: 40px;
+        top: 90%;
+        left: 55%;
+        width: 20px;
+        height: 20px;
     }
 }
