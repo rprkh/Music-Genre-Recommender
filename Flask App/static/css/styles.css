@@ -139,7 +139,7 @@ body {
     }
 }
 
-@media (max-width: 1024px) and (max-width: 1259px){
+@media (max-width: 1024px) and (max-width: 1259px) {
 
     .title p {
         font-size: 40px;
