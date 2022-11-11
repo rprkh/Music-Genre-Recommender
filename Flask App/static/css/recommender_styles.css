@@ -72,7 +72,7 @@ body {
     }
 }
 
-@media (min-width: 250px) and (max-width: 480px){
+@media (min-width: 250px) and (max-width: 480px) {
 
     .title p {
         font-size: 30px;
@@ -91,6 +91,7 @@ body {
 }
 
 @media (max-width: 249px) {
+    
     .title p {
         font-size: 25px;
     }
