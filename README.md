@@ -15,11 +15,11 @@ are generated using cosine similarity and the classified genre of music.
 ### Features
 
 - Upload `.wav` files for music recognition and recommendation
-- Validate type of file uploaded to the website
+- Validate the type of file uploaded to the website
 - Predict the genre of music
 - Get top 3 song recommendations
 - Play the recommended songs on the website
-- Display loading icon while predicting and recommending songs to the user
+- Display a loading icon while predicting and recommending songs to the user
 
 ### Dataset Used
 
