@@ -9,7 +9,17 @@ The training data consists of 1000 audio samples each of a duration of
 Optuna was used to perform hyperparameter tuning and improve the accuracy
 of the model by 8% (from 82% to 90%). Once an audio file is uploaded to the 
 website by the user, 58 different features are extracted and passed to the 
-model to accurately identify the genre of music.
+model to accurately identify the genre of music. Relevant song recommendations 
+are generated using cosine similarity and the classified genre of music.
+
+### Features
+
+- Upload `.wav` files for music recognition and recommendation
+- Validate type of file uploaded to the website
+- Predict the genre of music
+- Get top 3 song recommendations
+- Play the recommended songs on the website
+- Display loading icon while predicting and recommending songs to the user
 
 ### Dataset Used
 
