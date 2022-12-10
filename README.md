@@ -32,13 +32,14 @@ https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classif
 
 ### Flask App
 
-![image](https://github.com/rprkh/Music-Genre-Recognizer/blob/main/Flask%20App/readme_images/1.png)
+
+![image](https://user-images.githubusercontent.com/75483881/206853874-5aaa1e33-5503-45d7-9829-fb781ff4d0e6.png)
 <br>
 <br>
-![image](https://github.com/rprkh/Music-Genre-Recognizer/blob/main/Flask%20App/readme_images/2.png)
+![image](https://user-images.githubusercontent.com/75483881/206853913-69bbf3cb-d5dd-473d-8906-ee9f3d71d9f4.png)
 <br>
 <br>
-![image](https://github.com/rprkh/Music-Genre-Recognizer/blob/main/Flask%20App/readme_images/3.png)
+![image](https://user-images.githubusercontent.com/75483881/206853921-be4a84c1-df87-4d37-a092-f19781240a0d.png)
 
 ### Comparison of Different ML Models
 
